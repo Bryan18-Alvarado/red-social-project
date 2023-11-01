@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>publicaciones vista</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="publicaciones">
+      <input id="input_descripcion" placeholder="descripcion:" />
+      <button id="btnPublicar" type="button" onclick="guardar()">Publicar</button>
+      <!-- Agrega un campo de entrada de tipo "file" para cargar imágenes -->
+      <input type="file" id="input-imagen" accept="image/*" />
+      <div id="imagenes-publicadas">
+        <button id="btnDeletePublicacion">Eliminar Publicacion</button>
+      </div>
+
+      <ul id="lista_publicaciones"></ul>
+    </div>
+
+    <div id="comentarios">
+      <h3 class="h3_comentarios">Comentarios</h3>
+      <input id="input_comentario" placeholder="comentar" />
+      <button id="btnComentario" type="button" onclick="guardar()">
+        Comentar
+      </button>
+      <ul id="lista_comentario"></ul>
+      <button id="btnDeleteComentarios">Eliminar comentario</button>
+    </div>
+
+    <script src="./js/publication.js"></script>
+    <script src="./js/comments.js"></script>
+  </body>
+</html>
