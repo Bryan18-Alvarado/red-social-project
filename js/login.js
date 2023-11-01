@@ -1,10 +1,11 @@
-let users = []; // Lista de usuarios
+let users = []; // Lista de estudiantes
 
-const data = { // Objeto usuarios
+const data = { // Objeto estudiante
   username: "",
   password: ""
 };
 
+let editando = false;
 
 const datausers = document.querySelector("#datausers"), // Formulario
   usernameInput = document.querySelector("#username"),
@@ -18,10 +19,10 @@ submit.addEventListener("click", (e) => {
   const inputUsername = usernameInput.value;
   const inputPassword = passwordInput.value;
 
-
   // Obtener los datos del usuario del almacenamiento local
-const user = JSON.parse(localStorage.getItem('user'));
+  const usersData = JSON.parse(localStorage.getItem('users')) || [];
 
+  const user = usersData.find(u => u.username === inputUsername);
 
   if (user.username === inputUsername) {
     // Usuario encontrado, verificar contraseña
@@ -43,11 +44,16 @@ reset.addEventListener("click", (e) => {
     data.username = usernameInput.value;
     data.password = passwordInput.value;
 
-    // Guardar los datos del usuario en el almacenamiento local
-    localStorage.setItem('user', JSON.stringify(data));
+    // Obtener los datos existentes del almacenamiento local
+    const usersData = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Agregar el nuevo usuario a la lista
+    usersData.push({ ...data });
+
+    // Guardar la lista actualizada en el almacenamiento local
+    localStorage.setItem('users', JSON.stringify(usersData));
 
     alert("Registrado, ahora puedes iniciar sesión.");
-    users.push({ ...data }); // Agrega el usuario a la lista
     window.location.href = "index.html";
   } else {
     alert("Es necesario llenar todos los campos.");
@@ -66,7 +72,9 @@ visible.addEventListener("change", (e) => {
 
 function adduser() {
   // Guardar los datos del usuario en el almacenamiento local
-  localStorage.setItem('user', JSON.stringify(data));
+  // Esto no reemplazará los datos existentes
+
+  localStorage.setItem('users', JSON.stringify(data));
 
   // Redirigir al usuario al index.html
   window.location.href = 'index.html';
