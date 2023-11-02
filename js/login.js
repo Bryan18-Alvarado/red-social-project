@@ -2,10 +2,11 @@ let users = []; // Lista de estudiantes
 
 const data = { // Objeto estudiante
   username: "",
-  password: ""
+  password: "",
+  seguido: false  // Inicialmente, el usuario no está siendo seguido
+
 };
 
-let editando = false;
 
 const datausers = document.querySelector("#datausers"), // Formulario
   usernameInput = document.querySelector("#username"),
