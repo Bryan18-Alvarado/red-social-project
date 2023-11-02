@@ -30,7 +30,7 @@ submit.addEventListener("click", (e) => {
     if (user.password === inputPassword) {
       // Contraseña correcta, iniciar sesión
       alert("Inicio de sesión exitoso");
-      window.location.href = "index.html"; // Redirigir a la página de inicio de sesión
+      window.location.href = "vista.html"; // Redirigir a la página de inicio de sesión
     } else {
       alert("Contraseña incorrecta");
     }
@@ -55,7 +55,7 @@ reset.addEventListener("click", (e) => {
     localStorage.setItem('users', JSON.stringify(usersData));
 
     alert("Registrado, ahora puedes iniciar sesión.");
-    window.location.href = "index.html";
+    window.location.href = "vista.html";
   } else {
     alert("Es necesario llenar todos los campos.");
   }
@@ -71,17 +71,4 @@ visible.addEventListener("change", (e) => {
   }
 });
 
-function adduser() {
-  // Guardar los datos del usuario en el almacenamiento local
-  // Esto no reemplazará los datos existentes
 
-  localStorage.setItem('users', JSON.stringify(data));
-
-  // Redirigir al usuario al index.html
-  window.location.href = 'index.html';
-}
-
-function limpiarObjet() {
-  data.username = '';
-  data.password = '';
-}
