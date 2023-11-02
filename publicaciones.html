@@ -6,29 +6,30 @@
     <title>publicaciones vista</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
     <div class="publicaciones">
-      <input id="input_descripcion" placeholder="descripcion:" />
-      <button id="btnPublicar" type="button" onclick="guardar()">Publicar</button>
+      <input type="text" id="input_descripcion" placeholder="descripcion:" />
+      <button id="btnPublicar" type="button" class="btn btn-primary">Publicar</button>
       <!-- Agrega un campo de entrada de tipo "file" para cargar imágenes -->
       <input type="file" id="input-imagen" accept="image/*" />
-      <div id="imagenes-publicadas">
-      </div>
+      
 
-      <ul id="lista_publicaciones"></ul>
+      <ul id="lista_publicaciones" ></ul>
+
     </div>
-
+     <div id="imagenes-publicadas">
+     </div>
 
     <div id="comentarios">
       <h3 class="h3_comentarios">Comentarios</h3>
       <input id="input_comentario" placeholder="comentar" />
-      <button id="btnComentario" type="button" onclick="guardar()">
-        Comentar
-      </button>
+
+      <button id="btnComentario" type="button" class="btn btn-primary">Comentar</button>
       <ul id="lista_comentario"></ul>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./js/publication.js"></script>
     <script src="./js/comments.js"></script>
   </body>
