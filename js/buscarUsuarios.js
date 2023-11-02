@@ -2,8 +2,9 @@ const usuarios = [
   { id: 1, nombre: "Juan Pérez", seguido: false },
   { id: 2, nombre: "María González", seguido: false },
   { id: 3, nombre: "Carlos Rodríguez", seguido: false },
-  { id: 4, nombre: "Ana Sánchez", seguido: false },
-  { id: 5, nombre: "Luis Martínez", seguido: false },
+  { id: 4, nombre: "Bryan Alvarado", seguido: false },
+  { id: 5, nombre: "Katia Silva", seguido: false },
+
 ];
 
 const inputBusqueda = document.getElementById('inputBusqueda');

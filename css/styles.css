@@ -1,69 +1,98 @@
-body{
-    font-family:'Segoe UI';
-    padding: 2rem;
-}
-
-.h2_perfil{
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .publicaciones {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+  }
+  
+  #input_descripcion {
     width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #btnPublicar {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #lista_publicaciones {
+    list-style: none; /* Elimina los puntos de las listas */
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+  
+  #lista_publicaciones, #imagenes-publicadas  img{
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    font: size 2rem;
-    color: blue;
-}
+    max-width: 400px; /* Ajusta el tamaño máximo de las imágenes */
+    margin-top: 10px; /* Espacio entre el texto y la imagen */
+  }
+  
 
-.h3_comentarios{
-    font-family: 'Franklin Gothic Medium';
-}
-#btnCrearPublicacion{
-    padding: 0.5rem 1.5rem;
-    width: 15rem;
-    background-color: rgb(70, 135, 157);
-    color: white;
-    font-weight: bold;
-    border-radius: 0.6rem;
-    font-size: 1rem;cursor: pointer;
-    transition: all 0.5s ease-in-out;
-}
-
-#input_comentario{
-    padding: 0.8rem  1rem;
-    width: 40%;
-    border-radius: 0.6rem;
-    border: 1px solid  #120337;
-    font-weight: bold;
-    font: size 1rem;
-}
-
-
-
-#btnPublicar{
-    padding: 0.5rem 1.5rem;
-    width: 15rem;
-    background-color: rgb(21, 180, 111);
-    color: white;
-    font-weight: bold;
-    border-radius: 0.6rem;
-    font-size: 1rem;cursor: pointer;
-    transition: all 0.5s ease-in-out;
-}
-
-#input_descripcion{
-    padding: 0.8rem  1rem;
-    width: 40%;
-    border-radius: 0.6rem;
-    border: 1px solid  #120337;
-    font-weight: bold;
-    font: size 1rem;
-
-}
-
-#btnComentario{
-    padding: 0.5rem 1.5rem;
-    width: 15rem;
-    background-color: rgb(50, 21, 180);
-    color: white;
-    font-weight: bold;
-    border-radius: 0.6rem;
-    font-size: 1rem;cursor: pointer;
-    transition: all 0.5s ease-in-out;
-}
-
+  
+  #comentarios {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+  }
+  
+  .h3_comentarios {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  
+  #input_comentario {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  #btnComentario {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #lista_comentario {
+    list-style: none; /* Elimina los puntos de las listas */
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+  
+  #lista_comentario li {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
