@@ -1,32 +1,40 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>FACENEWTON</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <div id="app">
-      <h1>BYTEBUSTERS</h1>
-      
-      </div>
-      <div id="home">
-        <h2 class="h2_perfil">Perfil</h2>
-        <h3>Publicaciones</h3>
-        <a href="publicaciones.html">Crear Publicaciones</a>
-        <div>
-          <h1>Buscar Usuarios</h1>
-          <input type="text" id="inputBusqueda" placeholder="Buscar usuarios por nombre">
-          <button id="btnBuscar">Buscar</button>
-          <ul id="listaUsuarios"></ul>
-        
-          <script src="./js/buscarUsuarios.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
 
-        </div>
-      </div>
+    <div class="div-title">
+        <h1>Loguear</h1>
     </div>
-    <a href="login.html">Cerrar sesion</a>
-  </body>
+    <div class="container">
+        <div class="div-data">
+            <h2>Ingresa tus datos</h2>
+            <form action="#" id="datausers">  <!-- objectuser-->
+                <img src = "./image/loginuser.png" alt="user-png">
+                <label for="username">Usuario</label>
+                <input type="text" id="username" placeholder="username" required>
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" placeholder="contraseña" required>
+                <div class="box-visible">
+                    <input type="checkbox" id="visible">
+                    <label for="visible">Mostrar Contraseña</label>
+                </div>
+                <button type="submit" id="submit">Iniciar sesión</button>,
+                <button type="reset" id="reset">Resgistrarse</button>
+
+            </form>
+        </div> 
+
+    </div>
+   
+
+    <script src="./js/login.js"></script>
+
+</body>
 </html>
